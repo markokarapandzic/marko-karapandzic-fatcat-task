@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useFormik } from 'formik';
 import { AnyObjectSchema } from 'yup';
 
@@ -36,11 +36,14 @@ export const CreateForm = <T extends object>({
     const formik = useFormik<T>({
         initialValues,
         validationSchema,
-        onSubmit: (values, { resetForm }) => {
-            mutate(values);
-            resetForm();
-        },
+        onSubmit: (values) => mutate(values),
     });
+
+    useEffect(() => {
+        if (isSuccess) {
+            formik.resetForm();
+        }
+    }, [isSuccess]);
 
     const form = useMemo(() => renderForm(formik), [formik]);
 

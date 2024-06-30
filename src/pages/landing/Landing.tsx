@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import clsx from 'clsx';
 
-import { Card, CardType } from '@homework-task/components/landing/Card';
+import { Card, CardType } from '@homework-task/pages/landing/Card';
 
 const vscodeProjectLink = `vscode://file/${__CWD__}`;
 

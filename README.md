@@ -36,13 +36,13 @@ yarn add
 After installing the packages, start the development server:
 
 ```bash
-npm run start
+npm run dev
 ```
 
 or
 
 ```bash
-yarn run start
+yarn run dev
 ```
 
 This will start Vite, which will transpile TypeScript and run the project on `http://localhost:3000`.
@@ -63,5 +63,5 @@ This will start Vite, which will transpile TypeScript and run the project on `ht
 
 **Marko Karapandžić**
 
--   **Email**: karapandzicmarko1
+-   **Email**: karapandzicmarko1@gmail.com
 -   **GitHub**: [markokarapandzic](https://github.com/markokarapandzic)
