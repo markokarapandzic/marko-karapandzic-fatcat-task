@@ -7,7 +7,9 @@ export interface LoadingButtonProps
     loadingText?: string;
 }
 
-export const LoadingButton: FC<LoadingButtonProps> = ({
+export type LoadingButtonFC = FC<LoadingButtonProps>;
+
+export const LoadingButton: LoadingButtonFC = ({
     children,
     isLoading = false,
     loadingText = 'Loading...',
