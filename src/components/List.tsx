@@ -35,7 +35,7 @@ export const List: ListFC = () => {
     }
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl">
                 {data?.map((item: ListItem) => (
                     <div
@@ -48,6 +48,15 @@ export const List: ListFC = () => {
                         <h3 className="text-2xl font-bold">{item.name}</h3>
                         <p className="overflow-hidden whitespace-nowrap text-ellipsis">
                             {item.email}
+                        </p>
+                        <p className="overflow-hidden whitespace-nowrap text-ellipsis">
+                            {item.username}
+                        </p>
+                        <p className="overflow-hidden whitespace-nowrap text-ellipsis">
+                            {item.phone}
+                        </p>
+                        <p className="overflow-hidden whitespace-nowrap text-ellipsis">
+                            ID: {item.id}
                         </p>
                     </div>
                 ))}

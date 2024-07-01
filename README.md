@@ -36,16 +36,34 @@ yarn add
 After installing the packages, start the development server:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 or
 
 ```bash
-yarn run dev
+yarn run start
 ```
 
 This will start Vite, which will transpile TypeScript and run the project on `http://localhost:3000`.
+
+## Features
+
+### List
+
+The `List` component is styled using Tailwind CSS and leverages React Query to fetch and display data. The logic for fetching list data is encapsulated in the `useGetList.ts` custom hook. Additionally, the `axios.ts` file in the `utils/` directory defines an Axios interceptor to manage network requests.
+
+Within `List.tsx`, the component handles the display of list data, as well as the `isLoading` and `isError` states, providing appropriate feedback to users during data fetching and error conditions.
+
+### Create Form
+
+The `CreateForm` component, defined in `CreateForm.tsx`, dynamically generates a form based on its children and a provided validation schema. It supports handling mutations that are executed upon form submission. This component integrates with `Formik` to return a Formik object, facilitating form validation for individual fields. React Query is utilized to manage mutations efficiently.
+
+### Dynamic Page
+
+The `DynamicPage` component, defined in `DynamicPage.tsx`, allows for the generation of dynamic pages. By passing an array of objects, the component can create a layout and populate it with the specified components. This approach streamlines the process of page creation, enabling faster and easier development of complex page structures.
+
+> **NOTE: All of these components are implemented in TestPage.tsx.**
 
 ## Project Structure
 
@@ -63,5 +81,5 @@ This will start Vite, which will transpile TypeScript and run the project on `ht
 
 **Marko Karapandžić**
 
--   **Email**: karapandzicmarko1@gmail.com
+-   **Email**: karapandzicmarko1
 -   **GitHub**: [markokarapandzic](https://github.com/markokarapandzic)
